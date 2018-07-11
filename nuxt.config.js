@@ -17,7 +17,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto|Amatic+SC:300,400,500,700' },
+      { rel: 'stylesheet', href: 'https://cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css' }
     ]
   },
 
@@ -43,7 +44,16 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  },
   modules: [
+    
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
   ],
